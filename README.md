@@ -18,8 +18,10 @@ A Laravel package that provides a local development UI to browse and manage data
 ## Installation
 
 ```bash
-composer require jbmm/table-record-manager
+composer require jbmm/table-record-manager:^1.0.1 -W
 ```
+
+Use `^1.0.1` (not `1.0.0`) so Composer picks a release with simplified Illuminate dependencies. The `-W` flag allows Composer to update related packages when needed.
 
 Optional: publish config
 
@@ -75,6 +77,23 @@ DB_MANAGER_BOOTSTRAP6_CDN=https://cdn.jsdelivr.net/npm/bootstrap@6.0.0/dist/css/
 ```
 
 Publish config to add JS entries to `vite_entries` if your app requires them for styles.
+
+## Troubleshooting Composer conflicts
+
+If you see errors like *illuminate/support … was not loaded, likely because it conflicts with another require*:
+
+1. Confirm **PHP 8.2+** (`php -v`) and **Laravel 10, 11, or 12**.
+2. In your Laravel app root, run:
+   ```bash
+   composer why-not illuminate/support
+   composer prohibits illuminate/support
+   ```
+3. Install with dependency updates:
+   ```bash
+   composer require jbmm/table-record-manager:^1.0.1 -W
+   ```
+
+If a specific package appears in `why-not` / `prohibits`, upgrade that dependency or resolve its version constraints.
 
 ## Security
 
