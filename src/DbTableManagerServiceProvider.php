@@ -1,18 +1,18 @@
 <?php
 
-namespace Jbmm\DbManager;
+namespace Jbmm\DbTableManager;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View as ViewInstance;
-use Jbmm\DbManager\Services\UiFrameworkDetector;
-use Jbmm\DbManager\Support\UiAssets;
-use Jbmm\DbManager\Http\Middleware\EnsureDbManagerEnabled;
-use Jbmm\DbManager\Services\RecordService;
-use Jbmm\DbManager\Services\TableIntrospectionService;
+use Jbmm\DbTableManager\Services\UiFrameworkDetector;
+use Jbmm\DbTableManager\Support\UiAssets;
+use Jbmm\DbTableManager\Http\Middleware\EnsureDbTableManagerEnabled;
+use Jbmm\DbTableManager\Services\RecordService;
+use Jbmm\DbTableManager\Services\TableIntrospectionService;
 
-class DbManagerServiceProvider extends ServiceProvider
+class DbTableManagerServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -51,7 +51,7 @@ class DbManagerServiceProvider extends ServiceProvider
 
         /** @var Router $router */
         $router = $this->app->make(Router::class);
-        $router->aliasMiddleware('db-manager.enabled', EnsureDbManagerEnabled::class);
+        $router->aliasMiddleware('db-manager.enabled', EnsureDbTableManagerEnabled::class);
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }

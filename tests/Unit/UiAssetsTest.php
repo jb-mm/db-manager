@@ -1,9 +1,9 @@
 <?php
 
-namespace Jbmm\DbManager\Tests\Unit;
+namespace Jbmm\DbTableManager\Tests\Unit;
 
-use Jbmm\DbManager\Support\UiAssets;
-use Jbmm\DbManager\Tests\TestCase;
+use Jbmm\DbTableManager\Support\UiAssets;
+use Jbmm\DbTableManager\Tests\TestCase;
 
 class UiAssetsTest extends TestCase
 {

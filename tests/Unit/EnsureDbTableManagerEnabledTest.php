@@ -1,13 +1,13 @@
 <?php
 
-namespace Jbmm\DbManager\Tests\Unit;
+namespace Jbmm\DbTableManager\Tests\Unit;
 
 use Illuminate\Http\Request;
-use Jbmm\DbManager\Http\Middleware\EnsureDbManagerEnabled;
-use Jbmm\DbManager\Tests\TestCase;
+use Jbmm\DbTableManager\Http\Middleware\EnsureDbTableManagerEnabled;
+use Jbmm\DbTableManager\Tests\TestCase;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class EnsureDbManagerEnabledTest extends TestCase
+class EnsureDbTableManagerEnabledTest extends TestCase
 {
     protected function defineDatabaseMigrations(): void
     {
@@ -19,7 +19,7 @@ class EnsureDbManagerEnabledTest extends TestCase
         $this->app['env'] = 'production';
         $this->app['config']->set('db-manager.enabled', false);
 
-        $middleware = new EnsureDbManagerEnabled;
+        $middleware = new EnsureDbTableManagerEnabled;
 
         $this->expectException(NotFoundHttpException::class);
 
@@ -30,7 +30,7 @@ class EnsureDbManagerEnabledTest extends TestCase
     {
         $this->app['env'] = 'local';
 
-        $middleware = new EnsureDbManagerEnabled;
+        $middleware = new EnsureDbTableManagerEnabled;
         $response = $middleware->handle(Request::create('/db-manager'), fn () => response('ok'));
 
         $this->assertSame(200, $response->getStatusCode());

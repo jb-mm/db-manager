@@ -1,9 +1,9 @@
 <?php
 
-namespace Jbmm\DbManager\Tests\Unit;
+namespace Jbmm\DbTableManager\Tests\Unit;
 
-use Jbmm\DbManager\Services\UiFrameworkDetector;
-use Jbmm\DbManager\Tests\TestCase;
+use Jbmm\DbTableManager\Services\UiFrameworkDetector;
+use Jbmm\DbTableManager\Tests\TestCase;
 
 class UiFrameworkDetectorTest extends TestCase
 {

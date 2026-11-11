@@ -1,8 +1,8 @@
 <?php
 
-namespace Jbmm\DbManager\Tests;
+namespace Jbmm\DbTableManager\Tests;
 
-use Jbmm\DbManager\DbManagerServiceProvider;
+use Jbmm\DbTableManager\DbTableManagerServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
@@ -16,7 +16,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app): array
     {
         return [
-            DbManagerServiceProvider::class,
+            DbTableManagerServiceProvider::class,
         ];
     }
 

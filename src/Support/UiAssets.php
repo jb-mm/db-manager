@@ -1,6 +1,6 @@
 <?php
 
-namespace Jbmm\DbManager\Support;
+namespace Jbmm\DbTableManager\Support;
 
 class UiAssets
 {

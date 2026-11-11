@@ -1,12 +1,12 @@
 <?php
 
-namespace Jbmm\DbManager\Http\Middleware;
+namespace Jbmm\DbTableManager\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class EnsureDbManagerEnabled
+class EnsureDbTableManagerEnabled
 {
     public function handle(Request $request, Closure $next): Response
     {

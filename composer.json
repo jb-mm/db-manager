@@ -1,5 +1,5 @@
 {
-    "name": "jbmm/db-manager",
+    "name": "jbmm/db-table-manager",
     "description": "Local-only Laravel UI for browsing and managing database tables",
     "type": "library",
     "license": "MIT",
@@ -23,18 +23,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Jbmm\\DbManager\\": "src/"
+            "Jbmm\\DbTableManager\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jbmm\\DbManager\\Tests\\": "tests/"
+            "Jbmm\\DbTableManager\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jbmm\\DbManager\\DbManagerServiceProvider"
+                "Jbmm\\DbTableManager\\DbTableManagerServiceProvider"
             ]
         }
     },

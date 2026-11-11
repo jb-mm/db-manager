@@ -1,4 +1,4 @@
-# jbmm/db-manager
+# jbmm/db-table-manager
 
 A Laravel package that provides a local development UI to browse and manage database tables using your app’s default `.env` database connection.
 
@@ -18,7 +18,7 @@ A Laravel package that provides a local development UI to browse and manage data
 ## Installation
 
 ```bash
-composer require jbmm/db-manager
+composer require jbmm/db-table-manager
 ```
 
 Optional: publish config

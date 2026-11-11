@@ -1,20 +1,20 @@
 <?php
 
-namespace Jbmm\DbManager\Http\Controllers;
+namespace Jbmm\DbTableManager\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\View\View;
-use Jbmm\DbManager\Services\RecordService;
-use Jbmm\DbManager\Services\TableIntrospectionService;
-use Jbmm\DbManager\Services\UiFrameworkDetector;
-use Jbmm\DbManager\Support\UiClassMap;
-use Jbmm\DbManager\Support\UiTheme;
+use Jbmm\DbTableManager\Services\RecordService;
+use Jbmm\DbTableManager\Services\TableIntrospectionService;
+use Jbmm\DbTableManager\Services\UiFrameworkDetector;
+use Jbmm\DbTableManager\Support\UiClassMap;
+use Jbmm\DbTableManager\Support\UiTheme;
 use RuntimeException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class DbManagerController extends Controller
+class DbTableManagerController extends Controller
 {
     public function __construct(
         protected TableIntrospectionService $introspection,
