@@ -1,6 +1,6 @@
 <?php
 
-namespace Jbmm\DbTableManager\Support;
+namespace Jbmm\TableRecordManager\Support;
 
 class UiTheme
 {

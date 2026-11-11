@@ -1,8 +1,8 @@
 <?php
 
-namespace Jbmm\DbTableManager\Services;
+namespace Jbmm\TableRecordManager\Services;
 
-use Jbmm\DbTableManager\Support\UiTheme;
+use Jbmm\TableRecordManager\Support\UiTheme;
 
 class UiFrameworkDetector
 {

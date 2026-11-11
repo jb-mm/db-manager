@@ -1,11 +1,11 @@
 <?php
 
-namespace Jbmm\DbTableManager\Tests\Feature;
+namespace Jbmm\TableRecordManager\Tests\Feature;
 
 use Illuminate\Support\Facades\Route;
-use Jbmm\DbTableManager\Tests\TestCase;
+use Jbmm\TableRecordManager\Tests\TestCase;
 
-class DbTableManagerTest extends TestCase
+class TableRecordManagerTest extends TestCase
 {
     public function test_routes_are_registered(): void
     {
