@@ -1,6 +1,6 @@
 <?php
 
-namespace Jb\DbManager\Http\Middleware;
+namespace Jbmm\DbManager\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

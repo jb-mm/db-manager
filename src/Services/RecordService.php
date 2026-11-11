@@ -1,6 +1,6 @@
 <?php
 
-namespace Jb\DbManager\Services;
+namespace Jbmm\DbManager\Services;
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Validator;

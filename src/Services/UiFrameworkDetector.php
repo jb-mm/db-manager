@@ -1,8 +1,8 @@
 <?php
 
-namespace Jb\DbManager\Services;
+namespace Jbmm\DbManager\Services;
 
-use Jb\DbManager\Support\UiTheme;
+use Jbmm\DbManager\Support\UiTheme;
 
 class UiFrameworkDetector
 {

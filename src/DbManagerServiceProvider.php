@@ -1,16 +1,16 @@
 <?php
 
-namespace Jb\DbManager;
+namespace Jbmm\DbManager;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View as ViewInstance;
-use Jb\DbManager\Services\UiFrameworkDetector;
-use Jb\DbManager\Support\UiAssets;
-use Jb\DbManager\Http\Middleware\EnsureDbManagerEnabled;
-use Jb\DbManager\Services\RecordService;
-use Jb\DbManager\Services\TableIntrospectionService;
+use Jbmm\DbManager\Services\UiFrameworkDetector;
+use Jbmm\DbManager\Support\UiAssets;
+use Jbmm\DbManager\Http\Middleware\EnsureDbManagerEnabled;
+use Jbmm\DbManager\Services\RecordService;
+use Jbmm\DbManager\Services\TableIntrospectionService;
 
 class DbManagerServiceProvider extends ServiceProvider
 {

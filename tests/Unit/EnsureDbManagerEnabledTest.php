@@ -1,10 +1,10 @@
 <?php
 
-namespace Jb\DbManager\Tests\Unit;
+namespace Jbmm\DbManager\Tests\Unit;
 
 use Illuminate\Http\Request;
-use Jb\DbManager\Http\Middleware\EnsureDbManagerEnabled;
-use Jb\DbManager\Tests\TestCase;
+use Jbmm\DbManager\Http\Middleware\EnsureDbManagerEnabled;
+use Jbmm\DbManager\Tests\TestCase;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class EnsureDbManagerEnabledTest extends TestCase

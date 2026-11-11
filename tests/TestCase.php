@@ -1,8 +1,8 @@
 <?php
 
-namespace Jb\DbManager\Tests;
+namespace Jbmm\DbManager\Tests;
 
-use Jb\DbManager\DbManagerServiceProvider;
+use Jbmm\DbManager\DbManagerServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra

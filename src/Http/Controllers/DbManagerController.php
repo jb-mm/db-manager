@@ -1,16 +1,16 @@
 <?php
 
-namespace Jb\DbManager\Http\Controllers;
+namespace Jbmm\DbManager\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\View\View;
-use Jb\DbManager\Services\RecordService;
-use Jb\DbManager\Services\TableIntrospectionService;
-use Jb\DbManager\Services\UiFrameworkDetector;
-use Jb\DbManager\Support\UiClassMap;
-use Jb\DbManager\Support\UiTheme;
+use Jbmm\DbManager\Services\RecordService;
+use Jbmm\DbManager\Services\TableIntrospectionService;
+use Jbmm\DbManager\Services\UiFrameworkDetector;
+use Jbmm\DbManager\Support\UiClassMap;
+use Jbmm\DbManager\Support\UiTheme;
 use RuntimeException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

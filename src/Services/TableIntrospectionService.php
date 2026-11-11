@@ -1,6 +1,6 @@
 <?php
 
-namespace Jb\DbManager\Services;
+namespace Jbmm\DbManager\Services;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Jb\DbManager\Tests\Feature;
+namespace Jbmm\DbManager\Tests\Feature;
 
 use Illuminate\Support\Facades\Route;
-use Jb\DbManager\Tests\TestCase;
+use Jbmm\DbManager\Tests\TestCase;
 
 class DbManagerTest extends TestCase
 {

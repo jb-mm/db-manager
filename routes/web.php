@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Jb\DbManager\Http\Controllers\DbManagerController;
+use Jbmm\DbManager\Http\Controllers\DbManagerController;
 
 Route::middleware(config('db-manager.middleware', ['web', 'db-manager.enabled']))
     ->prefix(config('db-manager.route_prefix', 'db-manager'))
