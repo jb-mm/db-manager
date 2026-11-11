@@ -18,10 +18,10 @@ A Laravel package that provides a local development UI to browse and manage data
 ## Installation
 
 ```bash
-composer require jbmm/table-record-manager:^1.0.1 -W
+composer require jbmm/table-record-manager:^1.0.2 -W
 ```
 
-Use `^1.0.1` (not `1.0.0`) so Composer picks a release with simplified Illuminate dependencies. The `-W` flag allows Composer to update related packages when needed.
+Use **`^1.0.2`** (not `^1.0` or `1.0.0`) so Composer avoids old releases that declared extra `illuminate/*` packages. The `-W` flag allows Composer to update related packages when needed.
 
 Optional: publish config
 
@@ -80,20 +80,38 @@ Publish config to add JS entries to `vite_entries` if your app requires them for
 
 ## Troubleshooting Composer conflicts
 
-If you see errors like *illuminate/support … was not loaded, likely because it conflicts with another require*:
+If you see errors like *illuminate/support … was not loaded, likely because it conflicts with another require*, the blocker is usually **another package or Composer config in your Laravel app** (not this package). **v1.0.2+** declares only `php: ^8.2` so this package no longer adds an `illuminate/support` constraint.
 
-1. Confirm **PHP 8.2+** (`php -v`) and **Laravel 10, 11, or 12**.
-2. In your Laravel app root, run:
-   ```bash
-   composer why-not illuminate/support
-   composer prohibits illuminate/support
-   ```
-3. Install with dependency updates:
-   ```bash
-   composer require jbmm/table-record-manager:^1.0.1 -W
-   ```
+### Diagnose in your Laravel app root
 
-If a specific package appears in `why-not` / `prohibits`, upgrade that dependency or resolve its version constraints.
+```bash
+php -v
+composer show laravel/framework | head -3
+composer config platform.php
+composer why-not illuminate/support
+composer prohibits illuminate/support
+```
+
+| Finding | Action |
+|---------|--------|
+| PHP &lt; 8.2 | Upgrade PHP, or unset a fake platform: `composer config --unset platform.php` |
+| `platform.php` below 8.2 | `composer config platform.php 8.2.0` or `--unset platform.php` |
+| A package named in `why-not` / `prohibits` | Upgrade that package to a Laravel 12–compatible version |
+| No obvious blocker | `composer update laravel/framework --with-all-dependencies`, then retry |
+
+Then install:
+
+```bash
+composer require jbmm/table-record-manager:^1.0.2 -W
+```
+
+Verbose resolver output (last lines often name the conflict):
+
+```bash
+composer update jbmm/table-record-manager -W -vvv 2>&1 | tail -80
+```
+
+Do **not** use bare `^1.0` — it still allows **v1.0.0**, which pulled multiple `illuminate/*` requires.
 
 ## Security
 
