@@ -1,5 +1,5 @@
 {
-    "name": "jbmm/laravel-table-record-manager",
+    "name": "jbmm/table-record-manager",
     "description": "Local-only Laravel UI for browsing and managing database tables",
     "type": "library",
     "license": "MIT",

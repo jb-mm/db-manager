@@ -1,4 +1,4 @@
-# jbmm/laravel-table-record-manager
+# jbmm/table-record-manager
 
 A Laravel package that provides a local development UI to browse and manage database tables using your app’s default `.env` database connection.
 
@@ -18,7 +18,7 @@ A Laravel package that provides a local development UI to browse and manage data
 ## Installation
 
 ```bash
-composer require jbmm/laravel-table-record-manager
+composer require jbmm/table-record-manager
 ```
 
 Optional: publish config
